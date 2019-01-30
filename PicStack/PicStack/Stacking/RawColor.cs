@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using FastBitmapLib;
 
 namespace PicStack
 {
@@ -26,7 +27,7 @@ namespace PicStack
         public static RawColor operator *(RawColor a, float b) => new RawColor(a.R * b, a.G * b, a.B * b);
         public static RawColor operator /(RawColor a, float b) => new RawColor(a.R / b, a.G / b, a.B / b);
 
-        public static explicit operator Color(RawColor a) => Color.FromArgb((byte)(a.R.Clamp01() * 255), (byte)(a.G.Clamp01() * 255), (byte)(a.B.Clamp01() * 255));
-        public static explicit operator RawColor(Color a) => new RawColor(a.R, a.G, a.B);
+        public static explicit operator FastColor(RawColor a) => new FastColor((byte)(a.R.Clamp01() * 255), (byte)(a.G.Clamp01() * 255), (byte)(a.B.Clamp01() * 255));
+        public static explicit operator RawColor(FastColor a) => new RawColor(a.R, a.G, a.B);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace PicStack
 {
-    public struct RawImage
+    public class RawImage
     {
         public int Width { get; }
         public int Height { get; }

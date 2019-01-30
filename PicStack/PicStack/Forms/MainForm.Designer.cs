@@ -68,6 +68,7 @@
             this.exportBTN.TabIndex = 2;
             this.exportBTN.Text = "Export";
             this.exportBTN.UseVisualStyleBackColor = true;
+            this.exportBTN.Click += new System.EventHandler(this.exportBTN_Click);
             // 
             // trackBar
             // 
@@ -131,8 +132,8 @@
         private System.Windows.Forms.Button browseBTN;
         private System.Windows.Forms.Button exportBTN;
         private System.Windows.Forms.TrackBar trackBar;
-        private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label trackBarLabel;
+        public System.Windows.Forms.ProgressBar progressBar;
     }
 }
 
