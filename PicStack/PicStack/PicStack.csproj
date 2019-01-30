@@ -50,6 +50,9 @@
   <PropertyGroup>
     <StartupObject>PicStack.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fast Bitmap, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fast-Bitmap.1.1.2\lib\Fast Bitmap.dll</HintPath>
