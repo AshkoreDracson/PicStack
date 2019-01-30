@@ -44,7 +44,7 @@ namespace PicStack
 
         private void exportBTN_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog {Filter = "PNG Files|*.png", CheckPathExists = true};
+            SaveFileDialog sfd = new SaveFileDialog {Filter = "PNG Files|*.png", CheckPathExists = true, FileName = "output.png" };
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 List<string> importFilenames = new List<string>();
@@ -58,12 +58,14 @@ namespace PicStack
                 stacker.ExportFilename = sfd.FileName;
                 stacker.PartAmount = trackBar.Value;
 
+                UseWaitCursor = true;
                 progressBar.Value = 0;
                 progressBar.Maximum = stacker.PartAmount + 1;
 
                 stacker.Process();
 
                 progressBar.Value = progressBar.Maximum;
+                UseWaitCursor = false;
             }
         }
     }
