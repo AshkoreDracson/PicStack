@@ -9,6 +9,7 @@ PicStack is still very barebones and assumes the following things when stacking 
 - That all photos are the same size
 - That your scene is framed the same way (To avoid ghosting)
 - That you do not blend more parts than there are photos.
+- Try to divide into parts evenly, or some pictures will be skipped!
 
 PicStack is still:
 
